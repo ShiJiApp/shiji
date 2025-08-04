@@ -1,0 +1,8 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:src="@drawable/box_bg"
+            android:tileMode="disabled"
+            android:gravity="fill" />
+    </item>
+</layer-list>

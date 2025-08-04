@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    >
+
+    <LinearLayout
+        android:id="@+id/top_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FFFFFF"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:elevation="4dp">
+
+        <!-- 左侧图标 -->
+        <ImageView
+            android:id="@+id/icon_left"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/more" />
+
+        <!-- 中间栏目 -->
+        <LinearLayout
+            android:id="@+id/tab_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="12dp">
+
+            <TextView
+                android:id="@+id/tab_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关注"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#888"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/tab_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推荐"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/tab_nearby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="附近"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#888"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <!-- 右侧图标 -->
+        <ImageView
+            android:id="@+id/icon_right"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/search" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_below="@id/top_nav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/empty_text"
+        android:layout_below="@id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="这里没有内容"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#888888"
+        android:visibility="gone" />
+</RelativeLayout>

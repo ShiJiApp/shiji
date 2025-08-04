@@ -1,0 +1,120 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0f0">
+
+<!--     CameraX 实时预览（放最底层） -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/camera_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_return"/>
+
+    <ImageView
+        android:id="@+id/camera_scan"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/ic_scan"/>
+
+    <ImageView
+        android:id="@+id/camera_home"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_home"/>
+
+    <ImageView
+        android:id="@+id/camera_more"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_more"/>
+
+    <!-- 贴纸面板 -->
+    <LinearLayout
+        android:id="@+id/sticker_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        android:background="#80000000">
+    </LinearLayout>
+
+    <!-- 左下角播放 GIF -->
+    <ImageView
+        android:id="@+id/gif_overlay"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginBottom="130dp"
+        android:layout_marginStart="20dp"/>
+
+    <!-- 放在 PreviewView 上方，捕捉贴纸位置 -->
+
+    <!-- 提示文本 -->
+    <FrameLayout
+        android:id="@+id/sticker_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/ar_hint_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:text="提示文字"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="#AA000000"
+        android:padding="10dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/camera_snap"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/ic_snap"/>
+
+    <ImageView
+        android:id="@+id/camera_album"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="100dp"
+        android:src="@drawable/ic_album"/>
+
+    <!-- 切换摄像头按钮 -->
+    <ImageView
+        android:id="@+id/camera_switch"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="60dp"
+        android:layout_marginStart="100dp"
+        android:src="@drawable/ic_switch"/>
+
+
+</FrameLayout>
